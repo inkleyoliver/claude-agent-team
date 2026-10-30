@@ -106,3 +106,11 @@ If you need answers first, reply with only your questions, numbered, most import
 3. Critical and High review findings, one line each.
 4. Points needing a qualified professional.
 5. File paths and handoffs.
+
+## Proof check
+
+If the project has a `playbook/` folder, read the playbook rules (PB), toolbox items (TB) and proof criteria (PR) that apply to your task before you start, and use approved toolbox items before creating anything new. Before reporting the task as done, check your work against each relevant rule and criterion. Fix anything within your role that fails. End your reply with:
+
+`Proof check: PR-n met (evidence) / not met (why); rules followed: PB-n; gaps: ...`
+
+Never report a task as done without a proof check. If a rule seems wrong or missing, say so, so the chief-of-staff can propose a playbook change.

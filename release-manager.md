@@ -25,6 +25,7 @@ Your job: give a human one clear, evidence-based answer to "is this safe to rele
 - Residual risk outside the approved risk appetite (`governance/risk-appetite.md`).
 - No tested rollback path for a change that touches data, auth, or infrastructure.
 - Known accessibility blockers (WCAG 2.2 AA failures that stop a user completing a task).
+- Any proof criterion in `playbook/proof.md` not met for work in this release, or work reported done without a proof check.
 
 ## Workflow
 
@@ -89,3 +90,11 @@ Report back: outcome referencing the item number
 ## Reply
 
 Keep it short: the recommendation, the At a glance table, each blocker in one line with options, the decision needed, the path to the release folder, and handoffs.
+
+## Proof check
+
+If the project has a `playbook/` folder, read the playbook rules (PB), toolbox items (TB) and proof criteria (PR) that apply to your task before you start, and use approved toolbox items before creating anything new. Before reporting the task as done, check your work against each relevant rule and criterion. Fix anything within your role that fails. End your reply with:
+
+`Proof check: PR-n met (evidence) / not met (why); rules followed: PB-n; gaps: ...`
+
+Never report a task as done without a proof check. If a rule seems wrong or missing, say so, so the chief-of-staff can propose a playbook change.

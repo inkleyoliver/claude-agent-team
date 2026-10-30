@@ -54,6 +54,14 @@ A team of 25 Claude Code subagents for building software securely, accessibly an
 | `incident-responder` | opus | Incident response, including the UK GDPR 72-hour ICO deadline. |
 | `token-minimiser` | sonnet | Finds ways to use fewer tokens without cutting safeguards. |
 
+## How a project works: interview, playbook, toolbox, proof
+
+1. **Interview:** the chief of staff asks you one question at a time until it understands the goal, users, scope, constraints, risks and what done looks like, then plays back a summary for you to confirm.
+2. **Playbook** (`playbook/playbook.md`): your answers become numbered rules (PB-1, PB-2...) that every agent follows. You approve them. New projects start from the master playbook in `.playbook/master-playbook.md`.
+3. **Toolbox** (`playbook/toolbox.md`): everything you approve (designs, decisions, components, templates) is registered and tied to the rules it implements. Agents reuse it before building anything new.
+4. **Proof** (`playbook/proof.md`): checkable criteria for done (PR-1, PR-2...), plus a showcase of the first approved piece of work. Every agent checks its work against the proof before saying it's done.
+5. **Fixing:** when something goes wrong, the chief of staff traces it to a rule, proposes a change for you to approve, and re-runs only the work linked to that rule.
+
 ## Restore on a new device
 
 1. Install Claude Code and the GitHub CLI, and sign in with `gh auth login`.
