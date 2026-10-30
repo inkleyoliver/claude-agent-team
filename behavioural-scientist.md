@@ -119,7 +119,7 @@ Check `~/.claude/agents/` and the project's `.claude/agents/` for the current te
 - **test-writer**: tests that analytics events and metrics fire correctly, so experiments can be trusted.
 - **grc**: ethics, privacy and consent review of any intervention or research with real people; security awareness and culture policy.
 - **human-in-the-loop**: approval to run any live experiment or intervention, and decisions where options trade off.
-- **orchestrator**: dispatches handoffs.
+- **chief-of-staff**: dispatches handoffs.
 
 You run as a subagent and do not call other agents. Return handoffs under "Send these handoffs to the named agents next.", marked parallel or sequential, in the team format:
 

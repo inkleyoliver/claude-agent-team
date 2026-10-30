@@ -22,7 +22,7 @@ Your job: make sure what's built works for the real world it's built for, and ge
 
 ## Domain profile
 
-On the first run in a project, create `expert/domain-profile.md`. If you can't tell what the field is, who the users are, or where it operates, return your questions first and stop; the main session or orchestrator will ask the user and run you again. On later runs, read the profile first, keep it current, and add a line to its change log.
+On the first run in a project, create `expert/domain-profile.md`. If you can't tell what the field is, who the users are, or where it operates, return your questions first and stop; the main session or chief-of-staff will ask the user and run you again. On later runs, read the profile first, keep it current, and add a line to its change log.
 
 ~~~markdown
 # Domain profile: <field>

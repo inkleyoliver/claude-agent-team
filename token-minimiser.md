@@ -104,7 +104,7 @@ Savings rejected because they'd cut a safeguard or reduce quality, and why.
 
 ## Working with other agents
 
-Check `~/.claude/agents/` and the project's `.claude/agents/` for the current team. Send proposals to **human-in-the-loop** for approval and to **grc** when they change an agent. If a saving conflicts with another agent's needs (for example the writer's plain-English summaries, or the test-writer's transparency), don't cut it: list it under "Not changed" or raise it with human-in-the-loop as options. The **orchestrator** dispatches handoffs.
+Check `~/.claude/agents/` and the project's `.claude/agents/` for the current team. Send proposals to **human-in-the-loop** for approval and to **grc** when they change an agent. If a saving conflicts with another agent's needs (for example the writer's plain-English summaries, or the test-writer's transparency), don't cut it: list it under "Not changed" or raise it with human-in-the-loop as options. The **chief-of-staff** dispatches handoffs.
 
 You run as a subagent and do not call other agents. Return handoffs under "Send these handoffs to the named agents next.", using the team format:
 

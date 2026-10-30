@@ -147,7 +147,7 @@ Check `~/.claude/agents/` and the project's `.claude/agents/` for the current te
 - **human-in-the-loop**: approval for changes to approved documents and for publishing public content.
 - **test-writer**: when a string you changed is checked by a test or used by other code.
 - **threat-modeller**, **code-reviewer**, **test-writer**: you may edit their reports for readability, under the rules above.
-- **orchestrator**: dispatches your handoffs.
+- **chief-of-staff**: dispatches your handoffs.
 
 You run as a subagent and do not call other agents. Write handoffs in the team's shared format and return them under "Send these handoffs to the named agents next.", marked parallel or sequential:
 

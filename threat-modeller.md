@@ -84,8 +84,8 @@ Done when: <what a good result looks like, e.g. "tests prove a user gets 403 whe
 Report back: findings referencing the threat IDs, so the threat model can be updated
 ```
 
-### Pass handoffs to the orchestrator
-You run as a subagent and do not call other agents yourself. Dispatching is the job of the **orchestrator** agent (or, until it exists, the main session). Never skip this step:
+### Pass handoffs to the chief-of-staff
+You run as a subagent and do not call other agents yourself. Dispatching is the job of the **chief-of-staff** agent (or the main session when it is not running). Never skip this step:
 - Put every handoff in the **Handoffs** section of the threat model with status ⏳ Waiting to send, and repeat them in your final reply under the heading "Send these handoffs to the named agents next."
 - Mark which handoffs are independent and can run in parallel, and which must wait for another (e.g. tests should wait until code-reviewer confirms a fix exists).
 - When you are run again with agents' results, update the same threat model: change control statuses based on their evidence, add any new threats they uncovered, set the handoff status to ✅ Reported back, and record what they found in the **Agent findings** section.
