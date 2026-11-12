@@ -8,7 +8,7 @@ A team of 27 Claude Code subagents for building software securely, accessibly an
 
 | Agent | Model | Role |
 |---|---|---|
-| `chief-of-staff` | opus | Your chief of staff. Challenges and shapes requests, runs the team, brings decisions to you, gives briefings and keeps priorities across projects. Start it with `claude --agent chief-of-staff`. |
+| `chief-of-staff` | opus | Your chief of staff. Challenges and shapes requests, runs the team, brings decisions to you, gives briefings and keeps priorities across projects. See the setup sections below for how to start it. |
 | `human-in-the-loop` | opus | Approval gatekeeper. Writes decision briefs and keeps the approvals log. Never approves anything itself. |
 | `agent-steward` | sonnet | Builds and improves agents to the team's conventions, keeps this README current and runs retrospectives. |
 
@@ -100,7 +100,45 @@ Two more are commands you type in a chief-of-staff session:
 
 The scripts need Python 3.9 or later and nothing else.
 
-## Restore on a new device
+## Using the team in the Claude app (cloud sessions)
+
+If you work in the Claude app against your GitHub repositories, your sessions run in the cloud, not on your computer. Nothing in your own `.claude` folder is visible there. A setup script on the cloud environment fetches this repository and installs the skills each time a new session starts, so the team is available in every project.
+
+**The setup script** (already saved on the Default environment):
+
+```bash
+#!/bin/bash
+# Fetch the Claude agent team and install its skills for this session.
+# Every step is allowed to fail, so a problem here never stops a session starting.
+[ -d "$HOME/.claude/agents/.git" ] || git clone -q --depth 1 https://github.com/inkleyoliver/claude-agent-team "$HOME/.claude/agents" || true
+[ -f "$HOME/.claude/agents/install-skills.py" ] && python3 "$HOME/.claude/agents/install-skills.py" | head -1 || true
+```
+
+To add it to another environment, open the environment menu in a session's title bar, choose Edit, and paste it in as the setup script.
+
+**Things to know**
+
+- Each new session fetches the latest `main`, so changes pushed here reach every new session. There is nothing to reinstall.
+- This repository must stay public. The script fetches it without signing in, so if the repository is made private the fetch fails quietly and the agents do not load.
+- A session that is already open keeps the version it started with.
+
+**Check it worked.** In a new session, ask "List the agents you have available" and look for `chief-of-staff`. Then type `/` and look for `/new-feature` and `/triage-feedback`.
+
+**Working with the team in the app**
+
+| To do this | Type this |
+|---|---|
+| Plan a new feature or an upgrade | `/new-feature` and the feature in a sentence |
+| Process new feedback | Upload the CSV file, then `/triage-feedback` |
+| Use one agent | Ask for it by name, for example "use the code-reviewer agent on this change" |
+| Run a whole project | "Act as chief of staff and follow `~/.claude/agents/chief-of-staff.md`" |
+
+The app has no confirmed way to start a session as the chief of staff, as `claude --agent chief-of-staff` does in the terminal, so the last row is the way to do it there.
+
+## Using the team on your own computer
+
+This is for the terminal, or for sessions in the desktop app that work on folders on your computer. Cloud sessions do not use it.
+
 
 1. Install Claude Code and the GitHub CLI, and sign in with `gh auth login`.
 2. Clone this repository into your Claude agents folder:
@@ -117,11 +155,13 @@ The scripts need Python 3.9 or later and nothing else.
    ```
 
    Run this again whenever you pull changes.
-4. Start a new Claude Code session. The agents are available straight away.
+4. Start a new Claude Code session. The agents are available straight away. In the terminal, start the chief of staff with `claude --agent chief-of-staff`.
+
+On Windows PowerShell, write `$HOME\.claude\agents` in place of `~/.claude/agents`, because PowerShell does not expand `~` for git.
 
 ## Saving changes
 
-The `agent-steward` agent commits and pushes changes for you. To do it by hand, from `~/.claude/agents`:
+The `agent-steward` agent commits and pushes changes for you. In a cloud session, pushing needs this repository to be connected to the session. To do it by hand on your own computer, from `~/.claude/agents`:
 
 ```bash
 git add -A && git commit -m "Describe the change" && git push
