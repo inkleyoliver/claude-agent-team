@@ -24,7 +24,7 @@ Every agent must have:
 **Frontmatter**
 - `name`: lowercase, hyphenated, unique, matching the file name.
 - `description`: under about 60 words. Says what it is, when to use it, and its key limit. It loads into every turn, so no persona or filler.
-- `tools`: the minimum needed. Reviewers get no `Edit`; only builders edit code.
+- `tools`: the minimum needed. Reviewers get no `Edit` (they may have `Write` for their own report); only builders edit code.
 - `model`: `opus` for high-stakes judgement (security, governance, risk), `sonnet` for most other work, or no model line (the session's model) where the user has chosen that (engineer, code-reviewer, delivery-engineer).
 
 **Body**
@@ -47,9 +47,9 @@ Report back: outcome referencing the IDs
 - Subagents do not call other agents; the chief-of-staff dispatches handoffs.
 - A `## Proof check` section, identical across agents (copy it from an existing agent): read the playbook, use the toolbox, and check work against the proof before reporting done.
 
-**Unique ID prefixes** (check before assigning a new one): T threats, R risks, D decisions, P token proposals, PS platform security, RT red team, EX expert findings, E experiments, US user stories, ADR architecture decisions, INC incidents, O chief-of-staff tasks, RE reliability, DE delivery, UR user research, GTM go-to-market, CA commercial, AS agent steward, PB playbook rules, TB toolbox items, PR proof criteria, MPB master playbook rules, FT features, FB feedback entries.
+**Unique ID prefixes** (check before assigning a new one): T threats, R risks, D decisions, P token proposals, PS platform security, RT red team, EX expert findings, E experiments, US user stories, ADR architecture decisions, INC incidents, O chief-of-staff tasks, RE reliability, DE delivery, UR user research, GTM go-to-market, CA commercial, AS agent steward, PB playbook rules, TB toolbox items, PR proof criteria, MPB master playbook rules, FT features, FB feedback entries, CR code review findings.
 
-**Team folders in a project:** `threat-models/`, `test-reports/`, `approvals/`, `governance/`, `design-options/`, `content-changes/`, `token-reports/`, `behavioural-insights/`, `architecture/`, `product/`, `analytics/`, `releases/`, `platform-security/`, `incidents/`, `red-team/`, `expert/`, `reliability/`, `delivery/`, `user-research/`, `go-to-market/`, `commercial/`, `chief-of-staff/`, `playbook/`, `features/`, `feedback/`.
+**Team folders in a project:** `threat-models/`, `test-reports/`, `approvals/`, `governance/`, `design-options/`, `content-changes/`, `token-reports/`, `behavioural-insights/`, `architecture/`, `product/`, `analytics/`, `releases/`, `platform-security/`, `incidents/`, `red-team/`, `expert/`, `reliability/`, `delivery/`, `user-research/`, `go-to-market/`, `commercial/`, `chief-of-staff/`, `playbook/`, `features/`, `feedback/`, `code-reviews/`.
 
 ## Creating or changing an agent
 

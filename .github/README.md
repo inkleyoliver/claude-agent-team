@@ -40,7 +40,7 @@ A team of 27 Claude Code subagents for building software securely, accessibly an
 |---|---|---|
 | `engineer` | session model | Writes as little code as possible. Works on its own branch; never pushes. |
 | `delivery-engineer` | session model | Secure CI/CD pipelines, deployment scripts and infrastructure as code. Never deploys. |
-| `code-reviewer` | session model | Security-focused code review. |
+| `code-reviewer` | session model | Security-focused code review, written to `code-reviews/`. |
 | `test-writer` | sonnet | Tests with security cases, and clear plain-English test logs. |
 | `platform-security` | opus | Supply chain, CI/CD, infrastructure and containers. |
 | `reliability-engineer` | sonnet | Service levels, performance, load tests, security logging, recovery and cost. |

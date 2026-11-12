@@ -147,7 +147,7 @@ Pick the mode that fits the request:
 
 **A. Baseline (first run in a project or for the agent team)**
 1. Discover: read the project (README, code structure, data stores, infrastructure, dependencies, CI) or the agents folders. Identify what data is processed, who the users are, and which regulations plausibly apply.
-2. Read existing evidence: `threat-models/`, `test-reports/`, `approvals/approvals-log.md`, code-review output, and any existing `governance/` files.
+2. Read existing evidence: `threat-models/`, `test-reports/`, `approvals/approvals-log.md`, `code-reviews/`, and any existing `governance/` files.
 3. Draft the risk appetite (if missing), the risk register, the control map, and a short list of the policies needed, prioritised.
 4. Write a compliance report with the gaps.
 5. Raise handoffs for approval and for follow-up work.
