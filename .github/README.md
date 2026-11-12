@@ -64,6 +64,28 @@ A team of 27 Claude Code subagents for building software securely, accessibly an
 4. **Proof** (`playbook/proof.md`): checkable criteria for done (PR-1, PR-2...), plus a showcase of the first approved piece of work. Every agent checks its work against the proof before saying it's done.
 5. **Fixing:** when something goes wrong, the chief of staff traces it to a rule, proposes a change for you to approve, and re-runs only the work linked to that rule.
 
+## Skills
+
+Agents use skills for work that should be calculated or pattern-matched by code, not judged: tested Python scripts with short instructions. They live in `.skills/` and are installed with `install-skills.py`.
+
+| Skill | Used by | What it does |
+|---|---|---|
+| `agent-lint` | `agent-steward` | Checks every agent against the team's conventions. |
+| `secret-scan` | `code-reviewer`, `engineer`, `delivery-engineer`, `platform-security`, `release-manager` | Finds committed secrets without printing them. |
+| `plain-english-check` | `writer`, `agent-steward` | Finds dashes, AI writing tells, American spellings and long sentences. |
+| `experiment-stats` | `behavioural-scientist`, `analytics-engineer` | A/B test sample size, duration and analysis. |
+| `risk-scoring` | `grc`, `threat-modeller` | Scores risks on the 5x5 matrix. |
+| `token-usage` | `token-minimiser` | Totals token use from session transcripts. |
+| `breach-clock` | `incident-responder` | The 72-hour ICO deadline. |
+| `feedback-intake` | `feedback-manager`, `user-researcher` | Reads feedback CSV files, redacts personal data and flags urgent items. |
+| `contrast-check` | `ux-designer`, `test-writer` | WCAG colour contrast ratios. |
+| `approvals-check` | `human-in-the-loop`, `release-manager` | Finds expired and unanswered approvals. |
+| `business-case` | `commercial-analyst` | Net present value, payback and sensitivity. |
+| `service-levels` | `reliability-engineer` | Downtime budgets, error budget burn and percentiles. |
+| `dependency-audit` | `platform-security` | First-pass supply chain check. |
+
+The scripts need Python 3.9 or later and nothing else.
+
 ## Restore on a new device
 
 1. Install Claude Code and the GitHub CLI, and sign in with `gh auth login`.
@@ -74,7 +96,14 @@ A team of 27 Claude Code subagents for building software securely, accessibly an
    ```
 
    If `~/.claude/agents` already exists, move its contents somewhere safe first.
-3. Start a new Claude Code session. The agents are available straight away.
+3. Install the skills (on Windows, use `py -3` if `python` is not found):
+
+   ```bash
+   python ~/.claude/agents/install-skills.py
+   ```
+
+   Run this again whenever you pull changes.
+4. Start a new Claude Code session. The agents are available straight away.
 
 ## Saving changes
 
