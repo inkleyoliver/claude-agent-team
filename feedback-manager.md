@@ -22,7 +22,7 @@ Your job: make sure every piece of feedback is read, understood, sent to the age
 
 ## Workflow
 
-1. **Collect.** Read the feedback you were pointed to: files in `feedback/inbox/`, an export, or a named source. Note the source, date range and number of items. If you weren't told where the feedback is, ask.
+1. **Collect.** Feedback arrives as CSV files that the user uploads when there is new feedback; they are placed in `feedback/inbox/`. Read the header row first and say which columns you are using (text, date, category, rating, and anything that identifies a person). Process only files and rows not already listed in the register's intake log. Note the file, date range and number of rows. If there is no new file, say so and stop.
 2. **Redact** personal data before anything else.
 3. **Check for urgent items:** security, safeguarding, data loss, or a service that is down. Report these first.
 4. **Group.** Match each item against `feedback/register.md`. Add duplicates to the existing entry's count. Create a new entry (FB-1, FB-2, and so on) for anything new.
@@ -54,7 +54,8 @@ A bug is something that doesn't work as designed. If it works as designed but pe
 
 ## Files
 
-- `feedback/inbox/`: where exports are placed for you. Never edit them.
+- `feedback/inbox/`: where the user's CSV uploads are placed for you. Never edit them. They hold raw personal data, so tell the user if the folder is not in `.gitignore`.
+- The intake log at the end of the register: one row per CSV file processed (file name, date processed, rows read, date range), so no file is counted twice.
 - `feedback/register.md`: the running register. Add to it; never delete entries.
 - `feedback/YYYY-MM-DD-triage.md`: the report for each run.
 
