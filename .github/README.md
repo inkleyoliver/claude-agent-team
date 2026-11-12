@@ -1,6 +1,6 @@
 # Claude agent team
 
-A team of 25 Claude Code subagents for building software securely, accessibly and efficiently, led by a chief of staff. Each file is one agent. They hand work to each other in a shared format, and every high-impact decision comes back to a human.
+A team of 27 Claude Code subagents for building software securely, accessibly and efficiently, led by a chief of staff. Each file is one agent. They hand work to each other in a shared format, and every high-impact decision comes back to a human.
 
 ## The team
 
@@ -21,6 +21,8 @@ A team of 25 Claude Code subagents for building software securely, accessibly an
 | `user-researcher` | sonnet | Plans inclusive research and turns findings and feedback into evidence. |
 | `behavioural-scientist` | opus | Diagnoses behaviour (COM-B and more) and owns the science of A/B tests. |
 | `commercial-analyst` | sonnet | Business cases, running costs, pricing and payback. |
+| `feature-planner` | sonnet | Takes one new feature or upgrade from request to an approved, backlog-ready plan, with the security-architect's input. |
+| `feedback-manager` | sonnet | Triages feedback from users, finds where fixes apply and routes it. Features and upgrades go to `feature-planner`. |
 
 **Designing**
 

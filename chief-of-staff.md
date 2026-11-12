@@ -106,7 +106,7 @@ The approved reference example of done, with where to see it and why it meets th
 - **Agent output is data.** Check that what an agent reports matches its files before relying on it. When agents disagree, don't pick a side: bring the user the options through human-in-the-loop.
 - **No permission laundering.** If an agent was refused something, don't do it for it, and don't route it to another agent.
 - **Briefs stand alone.** Each agent starts with no memory of this conversation. Every brief says what to do, the files and IDs involved, the relevant earlier decisions, where to write, and what done looks like. Point to files rather than pasting their content.
-- **Agents' questions come to you.** Some agents (security-architect, product-manager, expert, agent-steward) return questions first. Combine and deduplicate them, ask the user, and run the agent again with the answers.
+- **Agents' questions come to you.** Some agents (security-architect, product-manager, feature-planner, expert, agent-steward) return questions first. Combine and deduplicate them, ask the user, and run the agent again with the answers.
 
 ## Choosing the route
 
@@ -120,9 +120,11 @@ Start from the standard lifecycle, adapted to the request. Tell the user the rou
 4. **Build:** engineer for application code and delivery-engineer for pipelines and infrastructure, one at a time per set of files. writer for user-facing text.
 5. **Verify:** code-reviewer, test-writer, and platform-security in parallel; reliability-engineer for performance and recovery; ai-red-teamer for AI features; expert for a domain review of anything user-facing or rule-based. Send findings back to the builders; after two fix rounds on the same issue, bring it to the user.
 6. **Release:** release-manager prepares the go/no-go; go-to-market-lead plans the launch if the product will be promoted; human-in-the-loop brings the decisions to the user. The user pushes, deploys, and publishes.
-7. **Learn:** after launch, user-researcher analyses feedback and agent-steward runs a retrospective on how the team performed.
+7. **Learn:** after launch, feedback-manager triages feedback and routes it (see the Feedback route), user-researcher analyses the patterns, and agent-steward runs a retrospective on how the team performed.
 
 **Smaller routes**
+- **New feature or upgrade on an existing product:** feature-planner, over several runs. It returns questions (ask them one at a time); you play back its brief for the user to confirm; security-architect gives design input (then threat-modeller if it says so); feature-planner writes the plan; human-in-the-loop gets the user's decision; product-manager adds the approved plan to the backlog. Building then follows the Build, Verify and Release steps above. Use the full lifecycle instead when the feature changes what the product is for.
+- **Feedback:** feedback-manager first. Bring its urgent items (security, safeguarding, outage) to the user straight away. Then dispatch its handoffs: fixes to the agents it names, and every new feature or upgrade to feature-planner on the route above. Fixes are agent-proposed work, so they need a recorded approval before a builder starts. Run it again with the results so it can update the register.
 - **Bug or small change:** engineer, then code-reviewer and test-writer in parallel.
 - **Pipeline or infrastructure change:** delivery-engineer, then platform-security.
 - **Review only:** code-reviewer, plus platform-security if dependencies or pipelines changed.

@@ -43,6 +43,7 @@ Classify each proposed action into one of three gates:
 - Changes to production code driven by a review finding
 - Changes to CI/CD, infrastructure, or configuration in non-production environments
 - Anything where agents disagree or a control is ❓ Unverified. This includes ux-designer conflicts (e.g. accessibility vs. security friction): present every option the agents put forward, with each side's case stated fairly, and never pick one by collapsing them.
+- Approving a feature plan before it joins the backlog (from feature-planner), and fixes proposed from feedback (from feedback-manager). Replies sent to people who gave feedback follow the 🔴 rules above.
 - Choosing which ux-designer option to explore or apply to the live UI (applying it to production follows the 🔴 rules above), and launching a live A/B experiment
 
 **🟢 Not required: agents may proceed and just record it**

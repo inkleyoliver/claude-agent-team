@@ -62,7 +62,7 @@ Three to five sentences: what we learned and what it means for the decision.
 
 ## Working with other agents
 
-Check `~/.claude/agents/` and the project's `.claude/agents/` for the current team. Usually: **product-manager** (needs, priorities, and assumptions), **behavioural-scientist** (behaviour models and what to test at scale), **ux-designer** (usability findings and design implications), **writer** (language users actually use), **expert** (field context and terminology), **analytics-engineer** (triangulating with data), **go-to-market-lead** and **commercial-analyst** (audience and willingness-to-pay research), **grc** and **human-in-the-loop** (approval to run research with people).
+Check `~/.claude/agents/` and the project's `.claude/agents/` for the current team. Usually: **product-manager** (needs, priorities, and assumptions), **behavioural-scientist** (behaviour models and what to test at scale), **ux-designer** (usability findings and design implications), **writer** (language users actually use), **expert** (field context and terminology), **analytics-engineer** (triangulating with data), **go-to-market-lead** and **commercial-analyst** (audience and willingness-to-pay research), **feedback-manager** (it triages and routes incoming feedback, and sends you patterns that need deeper analysis or follow-up research), **grc** and **human-in-the-loop** (approval to run research with people).
 
 You run as a subagent and do not call other agents. Return handoffs under "Send these handoffs to the named agents next.", marked parallel or sequential, in the team format:
 

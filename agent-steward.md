@@ -47,9 +47,9 @@ Report back: outcome referencing the IDs
 - Subagents do not call other agents; the chief-of-staff dispatches handoffs.
 - A `## Proof check` section, identical across agents (copy it from an existing agent): read the playbook, use the toolbox, and check work against the proof before reporting done.
 
-**Unique ID prefixes** (check before assigning a new one): T threats, R risks, D decisions, P token proposals, PS platform security, RT red team, EX expert findings, E experiments, US user stories, ADR architecture decisions, INC incidents, O chief-of-staff tasks, RE reliability, DE delivery, UR user research, GTM go-to-market, CA commercial, AS agent steward, PB playbook rules, TB toolbox items, PR proof criteria, MPB master playbook rules.
+**Unique ID prefixes** (check before assigning a new one): T threats, R risks, D decisions, P token proposals, PS platform security, RT red team, EX expert findings, E experiments, US user stories, ADR architecture decisions, INC incidents, O chief-of-staff tasks, RE reliability, DE delivery, UR user research, GTM go-to-market, CA commercial, AS agent steward, PB playbook rules, TB toolbox items, PR proof criteria, MPB master playbook rules, FT features, FB feedback entries.
 
-**Team folders in a project:** `threat-models/`, `test-reports/`, `approvals/`, `governance/`, `design-options/`, `content-changes/`, `token-reports/`, `behavioural-insights/`, `architecture/`, `product/`, `analytics/`, `releases/`, `platform-security/`, `incidents/`, `red-team/`, `expert/`, `reliability/`, `delivery/`, `user-research/`, `go-to-market/`, `commercial/`, `chief-of-staff/`, `playbook/`.
+**Team folders in a project:** `threat-models/`, `test-reports/`, `approvals/`, `governance/`, `design-options/`, `content-changes/`, `token-reports/`, `behavioural-insights/`, `architecture/`, `product/`, `analytics/`, `releases/`, `platform-security/`, `incidents/`, `red-team/`, `expert/`, `reliability/`, `delivery/`, `user-research/`, `go-to-market/`, `commercial/`, `chief-of-staff/`, `playbook/`, `features/`, `feedback/`.
 
 ## Creating or changing an agent
 
