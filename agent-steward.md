@@ -63,6 +63,7 @@ Skills give agents tested scripts and reference material, so arithmetic and patt
 - **A skill's `SKILL.md` must have a `description` and no `name` line.** Claude Code scans the agents folder for any file with a `name`, so a named skill file would be loaded as an agent. The folder name is the skill's name.
 - **Rules stay in the agent.** Limits, approval gates and safeguards are never moved into a skill, so an agent is still safe on a device where the skills are not installed. Skills hold scripts, templates and reference material.
 - **Scripts** use only Python's standard library, run on Windows, macOS and Linux, change nothing outside their stated output, and never print secrets or personal data. Test a script on sample data before committing it.
+- **Skills for the chief-of-staff** are not listed under `skills`, because that line is ignored for an agent started with `claude --agent`. It has the `Skill` tool and loads them when needed. `new-feature` and `triage-feedback` are commands the user types to start a route.
 - Keep each `SKILL.md` short: the full text is loaded on every run of each agent that lists it.
 - After changing anything in `.skills/`, run `python install-skills.py` and say in your reply that other devices need to pull and run it too.
 

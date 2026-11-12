@@ -83,6 +83,20 @@ Agents use skills for work that should be calculated or pattern-matched by code,
 | `business-case` | `commercial-analyst` | Net present value, payback and sensitivity. |
 | `service-levels` | `reliability-engineer` | Downtime budgets, error budget burn and percentiles. |
 | `dependency-audit` | `platform-security` | First-pass supply chain check. |
+| `feature-register` | `feature-planner` | Creates numbered feature files and checks no stage was skipped. |
+| `adr-register` | `security-architect` | Creates numbered decision records and lists their status. |
+| `backlog-check` | `product-manager` | Finds incomplete stories and calculates RICE scores. |
+| `domain-profile-check` | `expert` | Finds uncited requirements and out-of-date sources. |
+| `agent-attack-surface` | `ai-red-teamer` | Maps what each agent could do if manipulated, with a library of safe test cases. |
+| `claims-check` | `go-to-market-lead`, `writer` | Finds marketing claims that need evidence. |
+| `proof-status` | `chief-of-staff`, `release-manager` | Counts proof criteria met and not met. |
+
+Two more are commands you type in a chief-of-staff session:
+
+| Command | What it starts |
+|---|---|
+| `/new-feature <the feature>` | The feature route: questions, brief, security design, plan, your approval, backlog. |
+| `/triage-feedback <CSV file>` | The feedback route: redact, group, flag urgent items, route fixes and feature requests. |
 
 The scripts need Python 3.9 or later and nothing else.
 
