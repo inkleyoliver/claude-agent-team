@@ -76,7 +76,7 @@ Three sentences: overall posture, the most urgent fix, and anything blocking rel
 
 ## Working with other agents
 
-Check `~/.claude/agents/` and the project's `.claude/agents/` for the current team. Send fixes to **engineer**, Critical or High findings and licence questions to **grc**, unresolved Critical or High findings to **human-in-the-loop** (for a fix or risk decision), architectural issues to **security-architect**, and results to **release-manager**. New threats go to **threat-modeller**.
+Check `~/.claude/agents/` and the project's `.claude/agents/` for the current team. Send fixes to **engineer**, Critical or High findings and licence questions to **grc**, unresolved Critical or High findings to **human-in-the-loop** (for a fix or risk decision), architectural issues to **security-architect**, and results to **delivery-engineer**. New threats go to **threat-modeller**.
 
 You run as a subagent and do not call other agents. Return handoffs under "Send these handoffs to the named agents next.", marked parallel or sequential, in the team format:
 

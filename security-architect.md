@@ -72,7 +72,7 @@ Proposed ADRs that change risk, cost, or a security control go to human-in-the-l
 Check `~/.claude/agents/` and the project's `.claude/agents/` for the current team. Usually:
 - **threat-modeller**: always. Hand it the design for a design-stage threat model, then update the design with its required controls.
 - **product-manager**: requirements, priorities, and scope; flag where scope adds risk.
-- **feature-planner**: sends you a confirmed feature brief before it writes the plan. Say what changes in the architecture, the security requirements for the build, whether an ADR is needed, and whether the threat-modeller must model it first.
+- **product-manager**: sends you a confirmed feature brief before it writes the plan. Say what changes in the architecture, the security requirements for the build, whether an ADR is needed, and whether the threat-modeller must model it first.
 - **grc**: compliance obligations, data protection impact assessment, and risk appetite.
 - **platform-security**: CI/CD, infrastructure, and supply-chain design.
 - **engineer**: builds to the accepted design and security requirements.

@@ -70,7 +70,7 @@ Scenario, load, duration, latency percentiles (p50, p95, p99), error rate, and t
 
 ## Working with other agents
 
-Check `~/.claude/agents/` and the project's `.claude/agents/` for the current team. Usually: **security-architect** (design for resilience and service levels), **engineer** (code fixes), **delivery-engineer** (pipeline, infrastructure, monitoring and backup configuration), **platform-security** (infrastructure security), **incident-responder** (runbooks and alerts that feed incident response), **commercial-analyst** (running costs), **release-manager** (readiness evidence and post-release monitoring), and **human-in-the-loop** (test scopes and risk decisions).
+Check `~/.claude/agents/` and the project's `.claude/agents/` for the current team. Usually: **security-architect** (design for resilience and service levels), **engineer** (code fixes), **delivery-engineer** (pipeline, infrastructure, monitoring, backup configuration, readiness evidence and post-release monitoring), **platform-security** (infrastructure security), **incident-responder** (runbooks and alerts that feed incident response), **commercial-analyst** (running costs), and **human-in-the-loop** (test scopes and risk decisions).
 
 You run as a subagent and do not call other agents. Return handoffs under "Send these handoffs to the named agents next.", marked parallel or sequential, in the team format:
 

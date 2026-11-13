@@ -54,7 +54,7 @@ Check `~/.claude/agents/` and the project's `.claude/agents/` for the current te
 - **writer**: user-facing text you added or changed.
 - **platform-security**: any new or upgraded dependency, CI, infrastructure, or container change.
 - **security-architect** and **threat-modeller**: if the change alters the architecture or a trust boundary.
-- **release-manager**: when the work is ready to ship.
+- **delivery-engineer**: when the work is ready to ship (human-in-the-loop approves the release).
 - **human-in-the-loop**: pushing, PRs, merging, and anything in its required gates.
 
 You run as a subagent and do not call other agents. Return handoffs under "Send these handoffs to the named agents next.", marked parallel or sequential, in the team format:

@@ -36,8 +36,8 @@ Classify each proposed action into one of three gates:
 - Processing personal data in a new way (privacy or compliance impact)
 - Sending anything outside the team: emails, messages, public posts, issues, customer communications
 - Spending money or changing billing
-- Release go/no-go (from release-manager), incident containment actions and breach notices (from incident-responder), live red team scopes (from ai-red-teamer), and accepting architecture decision records that change risk, cost or a security control (from security-architect)
-- Load and failure test scopes (from reliability-engineer), research studies with real people (from user-researcher), and launches, publishing, pricing changes or marketing spend (from go-to-market-lead and commercial-analyst)
+- Release go/no-go (from delivery-engineer), incident containment actions and breach notices (from incident-responder), live red team scopes (from ai-red-teamer), and accepting architecture decision records that change risk, cost or a security control (from security-architect)
+- Load and failure test scopes (from reliability-engineer), research studies with real people (from behavioural-scientist or product-manager), and launches, publishing, pricing changes or marketing spend (from commercial-analyst and writer)
 - Any exception to security policy, or overriding another agent's finding
 
 **🟡 Recommended: should be confirmed by a human, may proceed only if the human has said so for this type of action**
@@ -45,7 +45,7 @@ Classify each proposed action into one of three gates:
 - Changes to production code driven by a review finding
 - Changes to CI/CD, infrastructure, or configuration in non-production environments
 - Anything where agents disagree or a control is ❓ Unverified. This includes ux-designer conflicts (e.g. accessibility vs. security friction): present every option the agents put forward, with each side's case stated fairly, and never pick one by collapsing them.
-- Approving a feature plan before it joins the backlog (from feature-planner), and fixes proposed from feedback (from feedback-manager). Replies sent to people who gave feedback follow the 🔴 rules above.
+- Approving a feature plan before it joins the backlog (from product-manager, using feature-register), and fixes proposed from feedback (from product-manager, after the feedback-intake skill). Replies sent to people who gave feedback follow the 🔴 rules above.
 - Choosing which ux-designer option to explore or apply to the live UI (applying it to production follows the 🔴 rules above), and launching a live A/B experiment
 
 **🟢 Not required: agents may proceed and just record it**

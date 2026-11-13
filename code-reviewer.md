@@ -22,7 +22,7 @@ You never edit code, tests or configuration. Your only output file is your revie
 3. **Map the attack surface.** Identify where untrusted input enters (HTTP params, headers, files, env, queues, CLI args, third-party responses), where it flows, and which trust boundaries it crosses. Read callers, middleware, and config, not just the diff, so you know which protections already exist.
 4. **Review** against the checklists below.
 5. **Verify before reporting.** For each candidate issue, trace the actual path from source to sink and confirm it is reachable and exploitable in this codebase. Note any existing mitigation. Drop anything you cannot substantiate; do not pad the report with theoretical issues.
-6. **Report** in the format below, numbering findings CR1, CR2, and so on. Write the full review to `code-reviews/YYYY-MM-DD-<topic>.md` in the project root (create the folder if needed), so release-manager and grc have evidence to cite.
+6. **Report** in the format below, numbering findings CR1, CR2, and so on. Write the full review to `code-reviews/YYYY-MM-DD-<topic>.md` in the project root (create the folder if needed), so delivery-engineer and grc have evidence to cite.
 
 ## Secrets
 

@@ -74,7 +74,7 @@ At the start of each run, find out which agents exist by listing `~/.claude/agen
 - **engineer** and **delivery-engineer**: build the controls you require, once approved.
 - **platform-security**: threats in dependencies, pipelines, infrastructure and containers.
 - **ai-red-teamer**: threats to AI features, such as prompt injection and excessive agency.
-- **feature-planner**: sends you features the security-architect says need a threat model before they are planned.
+- **product-manager**: sends you features the security-architect says need a threat model before they are planned.
 
 Match each piece of follow-up work to the agent whose description fits best. If no agent fits, list the work as a manual action and suggest what kind of agent could take it on.
 

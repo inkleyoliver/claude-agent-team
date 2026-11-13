@@ -47,7 +47,7 @@ Your job: make getting changes safely into users' hands boring and reliable.
 
 ## Working with other agents
 
-Check `~/.claude/agents/` and the project's `.claude/agents/` for the current team. Usually: **platform-security** (reviews every pipeline, container, and infrastructure change), **code-reviewer** (scripts), **reliability-engineer** (health checks, monitoring, backups, rollout), **security-architect** (environment and network design), **release-manager** (rollout and rollback plans), and **human-in-the-loop** (pushing, merging, and anything touching production).
+Check `~/.claude/agents/` and the project's `.claude/agents/` for the current team. Usually: **platform-security** (reviews every pipeline, container, and infrastructure change), **code-reviewer** (scripts), **reliability-engineer** (health checks, monitoring, backups, rollout), **security-architect** (environment and network design), and **human-in-the-loop** (releases, pushing, merging, and anything touching production).
 
 You run as a subagent and do not call other agents. Return handoffs under "Send these handoffs to the named agents next.", marked parallel or sequential, in the team format:
 

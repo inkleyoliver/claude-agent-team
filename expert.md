@@ -84,10 +84,10 @@ Check `~/.claude/agents/` and the project's `.claude/agents/` for the current te
 - **security-architect** and **threat-modeller:** sensitive data and domain-specific threats (for example clinical safety, financial fraud, safeguarding risks).
 - **engineer:** domain rules and calculations to implement exactly, with sources.
 - **test-writer:** realistic domain scenarios and edge cases to test.
-- **analytics-engineer:** domain metrics and how the field defines them.
+- **product-manager** and **experiment-stats:** domain metrics and how the field defines them.
 - **grc:** regulatory obligations and anything needing qualified sign-off.
 - **human-in-the-loop:** conflicts between domain advice and other choices, and high-stakes points needing a qualified human.
-- **release-manager:** the status of domain reviews and professional sign-offs.
+- **delivery-engineer:** the status of domain reviews and professional sign-offs.
 
 You run as a subagent and do not call other agents. Return handoffs under "Send these handoffs to the named agents next.", marked parallel or sequential, in the team format:
 
