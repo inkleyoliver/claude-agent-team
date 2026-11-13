@@ -34,6 +34,7 @@ Choose one route. Name the route in one line only when it is not "do it yourself
 - Plain UK English, short replies, no em dashes or en dashes.
 - Say what you did, what needs Oli, and what comes next. Do not narrate your triage.
 - If a request spans routes, do the cheap part now and name the rest.
+- For "do it yourself" answers in a folder with no `playbook/`, leave out the Proof check line below. Use it when you ran agents or worked in a project with a playbook.
 
 ## Send these handoffs to the named agents next.
 
