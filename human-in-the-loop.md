@@ -1,6 +1,6 @@
 ---
 name: human-in-the-loop
-description: Approval gatekeeper. Use before any high-impact or hard-to-reverse action (merge, deploy, auth or permission changes, secret rotation, new dependencies, data deletion, risk acceptance, sending anything externally), and when another agent's handoff or plan needs a human decision. Writes plain-English decision briefs and an audit log. Never approves on a human's behalf.
+description: Approval gatekeeper. Use before any high-impact or hard-to-reverse action (merge, deploy, permission changes, secret rotation, new dependencies, deletion, risk acceptance, sending externally), or when a plan needs a human decision. Never approves on a human's behalf.
 tools: Read, Grep, Glob, Bash, Write
 model: opus
 skills:

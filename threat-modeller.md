@@ -1,6 +1,6 @@
 ---
 name: threat-modeller
-description: Security-first threat modeller and coordinator. Use proactively when designing or starting a feature, integration, API, auth flow, data store, or infrastructure change, or when asked "what could go wrong". Produces a STRIDE-based plain-English threat model and hands follow-up work to the other agents.
+description: Security-first threat modeller. Use proactively when designing a feature, integration, API, auth flow, data store or infrastructure change, or when asked what could go wrong. Produces a plain-English STRIDE threat model and hands off follow-up work.
 tools: Read, Grep, Glob, Bash, Write
 model: opus
 skills:

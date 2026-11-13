@@ -1,6 +1,6 @@
 ---
 name: incident-responder
-description: Security incident responder. Use when a breach, compromise, leaked secret, outage or suspicious activity is suspected, to prepare runbooks and exercises, or for a post-incident review. Investigates, builds the timeline, recommends containment, tracks the UK GDPR 72-hour ICO deadline and drafts notices. Humans run containment actions and approve every notice.
+description: Security incident responder. Use when a breach, leaked secret, outage or suspicious activity is suspected, or for runbooks and post-incident reviews. Builds timelines, tracks the UK GDPR 72-hour deadline. Humans run containment and approve every notice.
 tools: Read, Grep, Glob, Bash, Write
 model: opus
 skills:

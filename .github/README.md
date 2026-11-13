@@ -1,6 +1,6 @@
 # Claude agent team
 
-A team of 28 Claude Code agents for building software securely, accessibly and efficiently, led by a chief of staff. Each file is one agent. They hand work to each other in a shared format, and every high-impact decision comes back to a human.
+A team of 22 Claude Code agents for building software securely, accessibly and efficiently, led by a chief of staff. Each file is one agent. They hand work to each other in a shared format, and every high-impact decision comes back to a human.
 
 ## The team
 
@@ -8,7 +8,7 @@ A team of 28 Claude Code agents for building software securely, accessibly and e
 
 | Agent | Model | Role |
 |---|---|---|
-| `chief-of-staff` | opus | Your chief of staff. Challenges and shapes requests, runs the team, brings decisions to you, gives briefings and keeps priorities across projects. Leads when a desktop session runs in a project folder whose `.claude/settings.json` sets `"agent": "chief-of-staff"`; front-desk starts such sessions. See the setup sections below. |
+| `chief-of-staff` | sonnet | Your chief of staff. Challenges and shapes requests, runs the team, brings decisions to you, gives briefings and keeps priorities across projects. Leads when a desktop session runs in a project folder whose `.claude/settings.json` sets `"agent": "chief-of-staff"`; front-desk starts such sessions. See the setup sections below. |
 | `front-desk` | inherits session model | Top of every chat (set as the user-level main agent). Triages each request: do it itself, call one or two specialists, start a Scouting or chief-of-staff desktop session, or ask one question. Has every tool, including connectors. Never sends, publishes, pushes, spends or approves. |
 | `human-in-the-loop` | opus | Approval gatekeeper. Writes decision briefs and keeps the approvals log. Never approves anything itself. |
 | `agent-steward` | sonnet | Builds and improves agents to the team's conventions, keeps this README current and runs retrospectives. |
@@ -17,13 +17,10 @@ A team of 28 Claude Code agents for building software securely, accessibly and e
 
 | Agent | Model | Role |
 |---|---|---|
-| `expert` | opus | Becomes an expert in whatever field the project is about, with a lasting domain profile and cited sources. |
+| `expert` | sonnet | Becomes an expert in whatever field the project is about, with a lasting domain profile and cited sources. |
 | `product-manager` | sonnet | Problem, outcomes, minimal scope, user stories and roadmap. |
-| `user-researcher` | sonnet | Plans inclusive research and turns findings and feedback into evidence. |
-| `behavioural-scientist` | opus | Diagnoses behaviour (COM-B and more) and owns the science of A/B tests. |
+| `behavioural-scientist` | sonnet | Diagnoses behaviour (COM-B and more) and owns the science of A/B tests. |
 | `commercial-analyst` | sonnet | Business cases, running costs, pricing and payback. |
-| `feature-planner` | sonnet | Takes one new feature or upgrade from request to an approved, backlog-ready plan, with the security-architect's input. |
-| `feedback-manager` | sonnet | Triages feedback from users, finds where fixes apply and routes it. Features and upgrades go to `feature-planner`. |
 
 **Designing**
 
@@ -33,15 +30,14 @@ A team of 28 Claude Code agents for building software securely, accessibly and e
 | `threat-modeller` | opus | STRIDE threat models in plain English. |
 | `ux-designer` | sonnet | Accessible, distinctive design with A/B prototype options. |
 | `writer` | sonnet | Plain English, UK GOV.UK style, no AI writing tells. |
-| `analytics-engineer` | sonnet | Privacy-safe tracking plans and precise metrics. |
 
 **Building and checking**
 
 | Agent | Model | Role |
 |---|---|---|
-| `engineer` | session model | Writes as little code as possible. Works on its own branch; never pushes. |
-| `delivery-engineer` | session model | Secure CI/CD pipelines, deployment scripts and infrastructure as code. Never deploys. |
-| `code-reviewer` | session model | Security-focused code review, written to `code-reviews/`. |
+| `engineer` | sonnet | Writes as little code as possible. Works on its own branch; never pushes. |
+| `delivery-engineer` | sonnet | Secure CI/CD pipelines, deployment scripts and infrastructure as code. Never deploys. |
+| `code-reviewer` | sonnet | Security-focused code review, written to `code-reviews/`. |
 | `test-writer` | sonnet | Tests with security cases, and clear plain-English test logs. |
 | `platform-security` | opus | Supply chain, CI/CD, infrastructure and containers. |
 | `reliability-engineer` | sonnet | Service levels, performance, load tests, security logging, recovery and cost. |
@@ -52,8 +48,6 @@ A team of 28 Claude Code agents for building software securely, accessibly and e
 | Agent | Model | Role |
 |---|---|---|
 | `grc` | opus | Policies, risk register, risk appetite and compliance (ISO 27001, UK GDPR, NIST, AI governance). |
-| `release-manager` | sonnet | Go/no-go checklist, release notes and rollback plan. |
-| `go-to-market-lead` | sonnet | Audience, positioning, launch plan and honest, legal marketing. |
 | `incident-responder` | opus | Incident response, including the UK GDPR 72-hour ICO deadline. |
 | `token-minimiser` | sonnet | Finds ways to use fewer tokens without cutting safeguards. |
 
@@ -72,25 +66,25 @@ Agents use skills for work that should be calculated or pattern-matched by code,
 | Skill | Used by | What it does |
 |---|---|---|
 | `agent-lint` | `agent-steward` | Checks every agent against the team's conventions. |
-| `secret-scan` | `code-reviewer`, `engineer`, `delivery-engineer`, `platform-security`, `release-manager` | Finds committed secrets without printing them. |
+| `secret-scan` | `code-reviewer`, `engineer`, `delivery-engineer`, `platform-security` | Finds committed secrets without printing them. |
 | `plain-english-check` | `writer`, `agent-steward` | Finds dashes, AI writing tells, American spellings and long sentences. |
-| `experiment-stats` | `behavioural-scientist`, `analytics-engineer` | A/B test sample size, duration and analysis. |
+| `experiment-stats` | `behavioural-scientist`, `chief-of-staff` | A/B test sample size, duration and analysis. |
 | `risk-scoring` | `grc`, `threat-modeller` | Scores risks on the 5x5 matrix. |
 | `token-usage` | `token-minimiser` | Totals token use from session transcripts. |
 | `breach-clock` | `incident-responder` | The 72-hour ICO deadline. |
-| `feedback-intake` | `feedback-manager`, `user-researcher` | Reads feedback CSV files, redacts personal data and flags urgent items. |
+| `feedback-intake` | `product-manager`, `chief-of-staff` | Reads feedback CSV files, redacts personal data and flags urgent items. |
 | `contrast-check` | `ux-designer`, `test-writer` | WCAG colour contrast ratios. |
-| `approvals-check` | `human-in-the-loop`, `release-manager` | Finds expired and unanswered approvals. |
+| `approvals-check` | `human-in-the-loop` | Finds expired and unanswered approvals. |
 | `business-case` | `commercial-analyst` | Net present value, payback and sensitivity. |
 | `service-levels` | `reliability-engineer` | Downtime budgets, error budget burn and percentiles. |
 | `dependency-audit` | `platform-security` | First-pass supply chain check. |
-| `feature-register` | `feature-planner` | Creates numbered feature files and checks no stage was skipped. |
+| `feature-register` | `product-manager` | Creates numbered feature files and checks no stage was skipped. |
 | `adr-register` | `security-architect` | Creates numbered decision records and lists their status. |
 | `backlog-check` | `product-manager` | Finds incomplete stories and calculates RICE scores. |
 | `domain-profile-check` | `expert` | Finds uncited requirements and out-of-date sources. |
 | `agent-attack-surface` | `ai-red-teamer` | Maps what each agent could do if manipulated, with a library of safe test cases. |
-| `claims-check` | `go-to-market-lead`, `writer` | Finds marketing claims that need evidence. |
-| `proof-status` | `chief-of-staff`, `release-manager` | Counts proof criteria met and not met. |
+| `claims-check` | `commercial-analyst`, `writer` | Finds marketing claims that need evidence. |
+| `proof-status` | `chief-of-staff`, `human-in-the-loop` | Counts proof criteria met and not met. |
 
 Two more are commands you type in a chief-of-staff session:
 

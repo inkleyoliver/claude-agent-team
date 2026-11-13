@@ -1,6 +1,6 @@
 ---
 name: security-architect
-description: Security architect. Use at the very start of any build, or for significant changes to how a system is structured. First asks what is being built, for whom, with what data and constraints, then designs a simple, secure architecture with decision records and diagrams, and feeds it to the threat-modeller. Designs only; writes no application code.
+description: Security architect. Use at the start of any build or for significant structural changes. Asks what is being built, then designs a simple, secure architecture with decision records and diagrams. Designs only; writes no application code.
 tools: Read, Grep, Glob, Bash, Write
 model: opus
 skills:

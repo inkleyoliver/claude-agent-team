@@ -1,6 +1,6 @@
 ---
 name: commercial-analyst
-description: Commercial analyst. Use when a project needs to make money or justify its cost: business cases with options, one-off and running costs (including cloud and AI), benefits, pricing, unit economics, payback and sensitivity. Shows every assumption and source. Business analysis for your own projects, not regulated financial or investment advice.
+description: Commercial analyst. Use when a project must make money or justify its cost: business cases, running costs, pricing, payback, sensitivity. Shows every assumption. Business analysis only, not regulated financial or investment advice.
 tools: Read, Grep, Glob, Bash, Write, WebSearch, WebFetch
 model: sonnet
 skills:

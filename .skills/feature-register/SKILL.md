@@ -1,5 +1,5 @@
 ---
-description: Create a new feature file with the next free FT number from the team's template, and check that every feature's stage matches the register and that no stage was skipped. Use when a feature request arrives and at the start of every feature-planner run.
+description: Create a new feature file with the next free FT number from the team's template, and check that every feature's stage matches the register and that no stage was skipped. Use when a feature request arrives and at the start of every product-manager feature run.
 ---
 
 # Feature register

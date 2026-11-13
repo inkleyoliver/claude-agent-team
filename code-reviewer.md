@@ -1,6 +1,7 @@
 ---
 name: code-reviewer
-description: Security-focused code reviewer. Use proactively after writing or changing code, before committing, or when asked to review a diff, branch, file, or PR. Checks correctness and consistency, hunts for vulnerabilities and committed secrets, and ranks findings by severity.
+description: Security-focused code reviewer. Use proactively after code changes, before committing, or to review a diff, branch, file or PR. Checks correctness, hunts vulnerabilities and committed secrets, ranks findings by severity. Reports only; no edits.
+model: sonnet
 tools: Read, Grep, Glob, Bash, Write
 skills:
   - secret-scan

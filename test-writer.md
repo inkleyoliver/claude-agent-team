@@ -1,6 +1,6 @@
 ---
 name: test-writer
-description: Test engineer. Use proactively after implementing a feature or fixing a bug, when coverage is missing, or when asked for tests. Writes and runs tests in the project's own framework, with security cases built in, and reports what was added and what passed.
+description: Test engineer. Use proactively after implementing a feature or fixing a bug, or when coverage is missing. Writes and runs tests in the project's framework, with security cases built in, and reports what was added and passed.
 tools: Read, Grep, Glob, Bash, Edit, Write
 model: sonnet
 skills:

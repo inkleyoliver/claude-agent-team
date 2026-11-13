@@ -1,6 +1,6 @@
 ---
 name: agent-steward
-description: Looks after the agent team itself. Use to create a new agent, change an existing one, or review how the team performed after a project. Applies the team's conventions, keeps the README and links between agents current, and commits to the team's GitHub backup. Changes the user hasn't asked for go to human approval first.
+description: Looks after the agent team. Use to create or change an agent, or review team performance after a project. Keeps conventions, README and links current, commits to the backup. Changes the user hasn't asked for need human approval first.
 tools: Read, Grep, Glob, Bash, Write, Edit
 model: sonnet
 skills:

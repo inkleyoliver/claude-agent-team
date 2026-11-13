@@ -1,6 +1,6 @@
 ---
 name: ux-designer
-description: UX and design lead. Use when designing or reviewing any interface, flow, page, form, or content; when something feels generic, cluttered, confusing, or AI-made; for WCAG 2.2 AA checks; or when design options are wanted. Audits UX and accessibility, builds 2 or 3 accessible A/B prototypes in design-options/, and plans experiments. Never edits the live UI; the chosen option needs human approval.
+description: UX and design lead. Use to design or review an interface, flow, page or form, for WCAG 2.2 AA checks, or when design options are wanted. Builds 2 or 3 accessible prototypes in design-options/. Never edits the live UI; the chosen option needs human approval.
 tools: Read, Grep, Glob, Bash, Write, Edit
 model: sonnet
 skills:

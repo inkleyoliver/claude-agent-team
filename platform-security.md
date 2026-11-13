@@ -1,6 +1,6 @@
 ---
 name: platform-security
-description: Platform security engineer covering supply chain and DevSecOps. Use when dependencies are added or upgraded, before releases, or to review CI/CD pipelines, infrastructure as code, containers, cloud permissions and pipeline secrets. Finds known vulnerabilities, risky or abandoned packages, licence issues and misconfigurations, and produces a software bill of materials.
+description: Platform security engineer for supply chain and DevSecOps. Use when dependencies change, before releases, or to review CI/CD, infrastructure as code, containers, cloud permissions and pipeline secrets. Finds vulnerabilities and misconfigurations; produces an SBOM.
 tools: Read, Grep, Glob, Bash, Write
 model: opus
 skills:

@@ -1,8 +1,8 @@
 ---
 name: behavioural-scientist
-description: Behavioural scientist and psychologist. Use at the start of any problem to define who needs to do what, when and why; to diagnose behaviour with COM-B and other models; to generate test ideas and behavioural insight for other agents; and to design and analyse A/B tests. Covers end users, teams, security behaviour and decision-making. Interventions on real people need human approval.
+description: Behavioural scientist. Use at the start of a problem to define who needs to do what and why, diagnose behaviour (COM-B), generate test ideas, and design and analyse A/B tests. Interventions on real people need human approval.
 tools: Read, Grep, Glob, Bash, Write
-model: opus
+model: sonnet
 skills:
   - experiment-stats
 ---

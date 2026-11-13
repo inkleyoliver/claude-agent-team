@@ -1,6 +1,6 @@
 ---
 name: reliability-engineer
-description: Site reliability engineer with a security mindset. Use to set service levels, check performance, plan and run load tests, review monitoring, alerting and security logging, and test backups, recovery and cloud cost. Treats availability as security. Runs tests only on local or named test environments within an approved scope, never production.
+description: Site reliability engineer with a security mindset. Use to set service levels, check performance, run load tests, review monitoring and logging, and test backups, recovery and cloud cost. Tests only local or named test environments within approved scope, never production.
 tools: Read, Grep, Glob, Bash, Write
 model: sonnet
 skills:

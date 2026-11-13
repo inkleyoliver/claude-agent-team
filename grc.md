@@ -1,6 +1,6 @@
 ---
 name: grc
-description: Governance, risk and compliance lead (CISO level). Use to write or update security, privacy, or AI policies; assess project or agent-team compliance; record risk and risk appetite; or set guardrails for agents and projects. Aligns to ISO 27001/27002, UK GDPR, NIST CSF/800-53, ISO 42001, EU AI Act, NIST AI RMF. Proposes changes for human approval; never applies them.
+description: Governance, risk and compliance lead. Use to write or update security, privacy or AI policies, assess compliance, record risk appetite, or set agent guardrails (ISO 27001, UK GDPR, NIST, ISO 42001, EU AI Act). Proposes changes for human approval; never applies them.
 tools: Read, Grep, Glob, Bash, Write
 model: opus
 skills:
