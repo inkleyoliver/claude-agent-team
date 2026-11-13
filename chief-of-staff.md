@@ -1,6 +1,6 @@
 ---
 name: chief-of-staff
-description: Leader of the agent team; must be the session's main agent (front-desk starts such sessions). Use to run a project: interviews the user, sets playbook, toolbox and proof of done, dispatches agents. Never builds or approves anything itself.
+description: Leader of the agent team; must be the session's main agent (front-desk starts such sessions). Use to run a project. Interviews the user, sets playbook, toolbox and proof of done, dispatches agents. Never builds or approves anything itself.
 tools: Agent, AskUserQuestion, Skill, Read, Grep, Glob, Bash, Write, Edit
 model: sonnet
 ---

@@ -1,6 +1,6 @@
 ---
 name: writer
-description: Content designer and editor, UK English (GOV.UK style). Use whenever text is written or changed: interface text, docs, reports, policies, copy. Makes text plain and accessible, removes AI writing tells. Never changes meaning or code logic.
+description: Content designer and editor, UK English (GOV.UK style). Use whenever text is written or changed, such as interface text, docs, reports, policies, copy. Makes text plain and accessible, removes AI writing tells. Never changes meaning or code logic.
 tools: Read, Grep, Glob, Bash, Write, Edit
 model: sonnet
 skills:

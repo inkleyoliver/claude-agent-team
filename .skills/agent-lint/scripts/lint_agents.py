@@ -25,6 +25,7 @@ for f in files:
     d = fm.get("description", ""); n = len(d.split()); words += n
     if not d: bad(f, "no description")
     elif n > 62: bad(f, f"description is {n} words (aim for under about 60)")
+    if ": " in d or " #" in d: bad(f, "description contains ': ' or ' #', which breaks the YAML header so the agent will not load; reword it")
     tools = [x.strip() for x in fm.get("tools", "").split(",") if x.strip()]
     if not tools and name not in INHERIT_TOOLS_OK: bad(f, "no tools line, so it inherits every tool")
     if "model" in fm and fm["model"] not in ("opus", "sonnet", "haiku", "inherit"): bad(f, f"unexpected model '{fm['model']}'")
