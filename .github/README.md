@@ -1,6 +1,6 @@
 # Claude agent team
 
-A team of 27 Claude Code subagents for building software securely, accessibly and efficiently, led by a chief of staff. Each file is one agent. They hand work to each other in a shared format, and every high-impact decision comes back to a human.
+A team of 28 Claude Code agents for building software securely, accessibly and efficiently, led by a chief of staff. Each file is one agent. They hand work to each other in a shared format, and every high-impact decision comes back to a human.
 
 ## The team
 
@@ -8,7 +8,8 @@ A team of 27 Claude Code subagents for building software securely, accessibly an
 
 | Agent | Model | Role |
 |---|---|---|
-| `chief-of-staff` | opus | Your chief of staff. Challenges and shapes requests, runs the team, brings decisions to you, gives briefings and keeps priorities across projects. See the setup sections below for how to start it. |
+| `chief-of-staff` | opus | Your chief of staff. Challenges and shapes requests, runs the team, brings decisions to you, gives briefings and keeps priorities across projects. Leads when a desktop session runs in a project folder whose `.claude/settings.json` sets `"agent": "chief-of-staff"`; front-desk starts such sessions. See the setup sections below. |
+| `front-desk` | inherits session model | Top of every chat (set as the user-level main agent). Triages each request: do it itself, call one or two specialists, start a Scouting or chief-of-staff desktop session, or ask one question. Has every tool, including connectors. Never sends, publishes, pushes, spends or approves. |
 | `human-in-the-loop` | opus | Approval gatekeeper. Writes decision briefs and keeps the approvals log. Never approves anything itself. |
 | `agent-steward` | sonnet | Builds and improves agents to the team's conventions, keeps this README current and runs retrospectives. |
 

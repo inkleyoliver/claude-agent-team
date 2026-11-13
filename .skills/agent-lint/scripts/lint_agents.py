@@ -9,6 +9,7 @@ US = re.compile(r"\b\w*(?:[a-z]ization|prioritiz|minimiz|authoriz|analyz|organiz
 DASH_OK = {"writer", "agent-steward"}      # they describe dashes
 NO_HANDOFF_OK = {"human-in-the-loop", "chief-of-staff"}
 NO_PROOF_OK = {"chief-of-staff"}
+INHERIT_TOOLS_OK = {"front-desk"}   # deliberately inherits every tool, including connectors
 problems, proofs, words = [], collections.defaultdict(list), 0
 def bad(f, msg): problems.append(f"{f.name}: {msg}")
 for f in files:
@@ -25,7 +26,7 @@ for f in files:
     if not d: bad(f, "no description")
     elif n > 62: bad(f, f"description is {n} words (aim for under about 60)")
     tools = [x.strip() for x in fm.get("tools", "").split(",") if x.strip()]
-    if not tools: bad(f, "no tools line, so it inherits every tool")
+    if not tools and name not in INHERIT_TOOLS_OK: bad(f, "no tools line, so it inherits every tool")
     if "model" in fm and fm["model"] not in ("opus", "sonnet", "haiku", "inherit"): bad(f, f"unexpected model '{fm['model']}'")
     if name not in DASH_OK and re.search("[\u2014\u2013]", t): bad(f, "contains an em dash or en dash")
     if not re.search(r"more than 25 years", body): bad(f, "persona line lacks 'more than 25 years'")
