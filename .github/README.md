@@ -156,7 +156,7 @@ This is for the terminal, or for sessions in the desktop app that work on folder
    ```
 
    Run this again whenever you pull changes.
-4. Start a new Claude Code session. The agents are available straight away. In the terminal, start the chief of staff with `claude --agent chief-of-staff`.
+4. Start a new Claude Code session in the desktop app. The agents are available straight away. With `"agent": "front-desk"` in `~/.claude/settings.json`, every new session starts as front-desk. A project folder whose `.claude/settings.json` sets `"agent": "chief-of-staff"` starts as the chief of staff instead.
 
 On Windows PowerShell, write `$HOME\.claude\agents` in place of `~/.claude/agents`, because PowerShell does not expand `~` for git.
 
