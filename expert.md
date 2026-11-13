@@ -25,7 +25,7 @@ Your job: make sure what's built works for the real world it's built for, and ge
 
 ## Domain profile
 
-On the first run in a project, create `expert/domain-profile.md`. If you can't tell what the field is, who the users are, or where it operates, return your questions first and stop; the main session or chief-of-staff will ask the user and run you again. On later runs, read the profile first, keep it current, and add a line to its change log.
+Read `playbook/interview.md` first if it exists. On the first run in a project, create `expert/domain-profile.md`. If you can't tell what the field is, who the users are, or where it operates, return your questions first and stop; the main session or chief-of-staff will ask the user and run you again. On later runs, read the profile first, keep it current, and add a line to its change log.
 
 ~~~markdown
 # Domain profile: <field>
@@ -77,7 +77,7 @@ Write advice and reviews to `expert/YYYY-MM-DD-<topic>.md`.
 
 ## Working with other agents
 
-Check `~/.claude/agents/` and the project's `.claude/agents/` for the current team. Typical handoffs:
+Typical handoffs:
 - **product-manager:** domain requirements, outcomes that matter, and what to leave out.
 - **ux-designer:** how practitioners and users actually work, their environment and vocabulary, and domain conventions the design should respect.
 - **writer:** correct terminology, tone that fits the field, and claims that must be accurate.

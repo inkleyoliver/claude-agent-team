@@ -20,7 +20,7 @@ A team of 22 Claude Code agents for building software securely, accessibly and e
 | `expert` | sonnet | Becomes an expert in whatever field the project is about, with a lasting domain profile and cited sources. |
 | `product-manager` | sonnet | Problem, outcomes, minimal scope, user stories and roadmap. |
 | `behavioural-scientist` | sonnet | Diagnoses behaviour (COM-B and more) and owns the science of A/B tests. |
-| `commercial-analyst` | sonnet | Business cases, running costs, pricing and payback. |
+| `commercial-analyst` | sonnet | Business cases, running costs, pricing and payback. On demand. |
 
 **Designing**
 
@@ -37,19 +37,19 @@ A team of 22 Claude Code agents for building software securely, accessibly and e
 |---|---|---|
 | `engineer` | sonnet | Writes as little code as possible. Works on its own branch; never pushes. |
 | `delivery-engineer` | sonnet | Secure CI/CD pipelines, deployment scripts and infrastructure as code. Never deploys. |
-| `code-reviewer` | sonnet | Security-focused code review, written to `code-reviews/`. |
+| `code-reviewer` | sonnet | Security-focused code review, written to `code-reviews/`. Runs the dependency-audit first pass. |
 | `test-writer` | sonnet | Tests with security cases, and clear plain-English test logs. |
-| `platform-security` | opus | Supply chain, CI/CD, infrastructure and containers. |
-| `reliability-engineer` | sonnet | Service levels, performance, load tests, security logging, recovery and cost. |
-| `ai-red-teamer` | opus | Tests AI features and this team against prompt injection and misuse, in approved test scopes only. |
+| `platform-security` | opus | On demand: when dependency-audit flags something, pipelines, infrastructure or containers change, and before release. |
+| `reliability-engineer` | sonnet | Service levels, performance, load tests, security logging, recovery and cost. On demand. |
+| `ai-red-teamer` | opus | Tests AI features and this team against prompt injection and misuse, in approved test scopes only. On demand (AI features). |
 
 **Governing, shipping and launching**
 
 | Agent | Model | Role |
 |---|---|---|
 | `grc` | opus | Policies, risk register, risk appetite and compliance (ISO 27001, UK GDPR, NIST, AI governance). |
-| `incident-responder` | opus | Incident response, including the UK GDPR 72-hour ICO deadline. |
-| `token-minimiser` | sonnet | Finds ways to use fewer tokens without cutting safeguards. |
+| `incident-responder` | opus | Incident response, including the UK GDPR 72-hour ICO deadline. Runs immediately when an incident is reported. |
+| `token-minimiser` | sonnet | Finds ways to use fewer tokens without cutting safeguards. On demand. |
 
 ## How a project works: interview, playbook, toolbox, proof
 
@@ -57,7 +57,8 @@ A team of 22 Claude Code agents for building software securely, accessibly and e
 2. **Playbook** (`playbook/playbook.md`): your answers become numbered rules (PB-1, PB-2...) that every agent follows. You approve them. New projects start from the master playbook in `.playbook/master-playbook.md`.
 3. **Toolbox** (`playbook/toolbox.md`): everything you approve (designs, decisions, components, templates) is registered and tied to the rules it implements. Agents reuse it before building anything new.
 4. **Proof** (`playbook/proof.md`): checkable criteria for done (PR-1, PR-2...), plus a showcase of the first approved piece of work. Every agent checks its work against the proof before saying it's done.
-5. **Fixing:** when something goes wrong, the chief of staff traces it to a rule, proposes a change for you to approve, and re-runs only the work linked to that rule.
+5. **Verify and fix loop:** checks run in waves of at most 3 agents (code-reviewer and test-writer first; platform-security, reliability-engineer, ai-red-teamer and expert only where they apply). With your recorded standing approval, routine review and test findings go straight back to the engineer, up to 2 rounds, then to you. Never for authentication, secrets, new dependencies or deletions.
+6. **Fixing:** when something goes wrong, the chief of staff traces it to a rule, proposes a change for you to approve, and re-runs only the work linked to that rule.
 
 ## Skills
 
@@ -77,7 +78,7 @@ Agents use skills for work that should be calculated or pattern-matched by code,
 | `approvals-check` | `human-in-the-loop` | Finds expired and unanswered approvals. |
 | `business-case` | `commercial-analyst` | Net present value, payback and sensitivity. |
 | `service-levels` | `reliability-engineer` | Downtime budgets, error budget burn and percentiles. |
-| `dependency-audit` | `platform-security` | First-pass supply chain check. |
+| `dependency-audit` | `code-reviewer`, `platform-security` | First-pass supply chain check. |
 | `feature-register` | `product-manager` | Creates numbered feature files and checks no stage was skipped. |
 | `adr-register` | `security-architect` | Creates numbered decision records and lists their status. |
 | `backlog-check` | `product-manager` | Finds incomplete stories and calculates RICE scores. |

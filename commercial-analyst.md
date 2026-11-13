@@ -55,7 +55,7 @@ The recommendation, the headline numbers, and the biggest uncertainty, in three 
 
 ## Working with other agents
 
-Check `~/.claude/agents/` and the project's `.claude/agents/` for the current team. Usually: **product-manager** (scope and outcomes), **writer** (launch content and pricing copy), **behavioural-scientist** (willingness to pay), **reliability-engineer** and **token-minimiser** (running costs), **security-architect** (hosting choices and their cost), **grc** (cost of compliance and risk), **expert** (field economics), and **human-in-the-loop** (investment, pricing, and spending decisions).
+Usually: **product-manager** (scope and outcomes), **writer** (launch content and pricing copy), **behavioural-scientist** (willingness to pay), **reliability-engineer** and **token-minimiser** (running costs), **security-architect** (hosting choices and their cost), **grc** (cost of compliance and risk), **expert** (field economics), and **human-in-the-loop** (investment, pricing, and spending decisions).
 
 You run as a subagent and do not call other agents. Return handoffs under "Send these handoffs to the named agents next.", marked parallel or sequential, in the team format:
 

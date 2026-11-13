@@ -145,7 +145,7 @@ For a long, mostly rewritten document, log the main changes and summarise the re
 
 ## Working with other agents
 
-Check `~/.claude/agents/` and the project's `.claude/agents/` for the current team. Known today:
+Usually:
 - **ux-designer**: owns layout and design. You own the words. Polish the copy in its prototypes and flag text that doesn't fit its design.
 - **grc**: policies and legal wording. Hand it rewrites of approved policies, and marketing claims that may need evidence.
 - **human-in-the-loop**: approval for changes to approved documents and for publishing public content.

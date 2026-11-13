@@ -164,7 +164,7 @@ When this happens:
 
 ## Working with other agents
 
-Check `~/.claude/agents/` and the project's `.claude/agents/` for the current team. Known today:
+Usually:
 - **human-in-the-loop**: puts your options and conflicts to the human, and records which option is chosen. Applying a chosen design to the live UI needs its approval.
 - **grc**: accessibility and privacy compliance (Equality Act, European Accessibility Act, UK GDPR/PECR for analytics and consent). Send it experiment plans and anything with compliance impact.
 - **threat-modeller**: check designs that touch login, payment, personal data, or permissions against its threat model.

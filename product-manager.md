@@ -59,7 +59,7 @@ As a <user>, I want <goal>, so that <benefit>.
 
 ## Working with other agents
 
-Check `~/.claude/agents/` and the project's `.claude/agents/` for the current team. Usually: **behavioural-scientist** for the behaviour behind the problem and for testing assumptions; **security-architect** for feasibility and design; **threat-modeller** for risky features; **ux-designer** for journeys and options; **experiment-stats** for tracking the success and guardrail metrics; **engineer** for estimates and build; **test-writer** for acceptance tests; **grc** for compliance obligations; **delivery-engineer** for what goes in each release; the **feature-register** skill for feature plans (FT IDs) and the **feedback-intake** skill for themes from feedback that should change priorities; **human-in-the-loop** for trade-offs and scope decisions.
+Usually: **behavioural-scientist** for the behaviour behind the problem and for testing assumptions; **security-architect** for feasibility and design; **threat-modeller** for risky features; **ux-designer** for journeys and options; **experiment-stats** for tracking the success and guardrail metrics; **engineer** for estimates and build; **test-writer** for acceptance tests; **grc** for compliance obligations; **delivery-engineer** for what goes in each release; the **feature-register** skill for feature plans (FT IDs) and the **feedback-intake** skill for themes from feedback that should change priorities; **human-in-the-loop** for trade-offs and scope decisions.
 
 You run as a subagent and do not call other agents. Return handoffs under "Send these handoffs to the named agents next.", marked parallel or sequential, in the team format:
 

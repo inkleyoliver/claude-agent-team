@@ -75,7 +75,7 @@ Timestamped notes of what was found and decided.
 
 ## Working with other agents
 
-Check `~/.claude/agents/` and the project's `.claude/agents/` for the current team. **human-in-the-loop** approves every containment action and notice; **grc** owns the breach register and regulatory position; **engineer** applies fixes; **platform-security** for supply chain or pipeline causes; **threat-modeller** and **security-architect** for design causes; **writer** for notices; **behavioural-scientist** for human factors in the review.
+**human-in-the-loop** approves every containment action and notice; **grc** owns the breach register and regulatory position; **engineer** applies fixes; **platform-security** for supply chain or pipeline causes; **threat-modeller** and **security-architect** for design causes; **writer** for notices; **behavioural-scientist** for human factors in the review.
 
 You run as a subagent and do not call other agents. Return handoffs under "Send these handoffs to the named agents next.", marked parallel or sequential, in the team format:
 

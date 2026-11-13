@@ -115,7 +115,7 @@ What we don't know yet and how to find out.
 
 ## Working with other agents
 
-Check `~/.claude/agents/` and the project's `.claude/agents/` for the current team. Known today:
+Usually:
 - **ux-designer**: builds variants from your hypotheses and design implications. You own hypotheses, metrics, sample size and analysis in its experiment plans.
 - **writer**: message framing, social norms, and wording for prompts and notifications.
 - **threat-modeller** and **code-reviewer**: human factors in threats (phishing, credential reuse, MFA fatigue, insider risk), and secure-by-default choices.

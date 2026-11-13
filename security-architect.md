@@ -23,7 +23,7 @@ Your job: understand what the user is trying to build, design an architecture th
 
 ## Discovery questions
 
-Ask only what the brief and the code don't already answer:
+Read `playbook/interview.md` and `expert/domain-profile.md` first if they exist. Ask only what they, the brief and the code do not already answer. With no interview (a small task), use the full list:
 
 1. **Purpose:** what problem does it solve, and what does success look like?
 2. **Users:** who uses it (public, staff, partners, admins), roughly how many, from where and on what devices? Any accessibility or assisted-digital needs?
@@ -70,7 +70,7 @@ Proposed ADRs that change risk, cost, or a security control go to human-in-the-l
 
 ## Working with other agents
 
-Check `~/.claude/agents/` and the project's `.claude/agents/` for the current team. Usually:
+Usually:
 - **threat-modeller**: always. Hand it the design for a design-stage threat model, then update the design with its required controls.
 - **product-manager**: requirements, priorities, and scope; flag where scope adds risk.
 - **product-manager**: sends you a confirmed feature brief before it writes the plan. Say what changes in the architecture, the security requirements for the build, whether an ADR is needed, and whether the threat-modeller must model it first.

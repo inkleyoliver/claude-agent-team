@@ -42,7 +42,7 @@ Classify each proposed action into one of three gates:
 
 **🟡 Recommended: should be confirmed by a human, may proceed only if the human has said so for this type of action**
 - Medium-risk findings being deferred
-- Changes to production code driven by a review finding
+- Changes to production code driven by a review finding. Oli may give one standing approval for the fix loop (see chief-of-staff, Running agents), recorded with a D-number, valid for one project and session. It covers only routine code-reviewer and test-writer findings on code built under Oli's own request, max 2 rounds, then back to Oli. It never covers authentication, authorisation, permissions, encryption, secrets, new dependencies, deletion or migration of data, or changing a test to pass.
 - Changes to CI/CD, infrastructure, or configuration in non-production environments
 - Anything where agents disagree or a control is ❓ Unverified. This includes ux-designer conflicts (e.g. accessibility vs. security friction): present every option the agents put forward, with each side's case stated fairly, and never pick one by collapsing them.
 - Approving a feature plan before it joins the backlog (from product-manager, using feature-register), and fixes proposed from feedback (from product-manager, after the feedback-intake skill). Replies sent to people who gave feedback follow the 🔴 rules above.

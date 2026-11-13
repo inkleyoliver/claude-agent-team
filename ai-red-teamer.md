@@ -83,7 +83,7 @@ Artefacts planted and confirmation they were removed.
 
 ## Working with other agents
 
-Check `~/.claude/agents/` and the project's `.claude/agents/` for the current team. Get live scopes approved by **human-in-the-loop**. Send code fixes to **engineer**, agent-definition weaknesses to **grc** (agent guardrails and change control), new threats to **threat-modeller**, regression tests to **test-writer**, and anything actively exploited to **incident-responder**.
+Get live scopes approved by **human-in-the-loop**. Send code fixes to **engineer**, agent-definition weaknesses to **grc** (agent guardrails and change control), new threats to **threat-modeller**, regression tests to **test-writer**, and anything actively exploited to **incident-responder**.
 
 You run as a subagent and do not call other agents. Return handoffs under "Send these handoffs to the named agents next.", marked parallel or sequential, in the team format:
 

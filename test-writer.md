@@ -127,7 +127,7 @@ Never include real secrets, tokens, or personal data in the log, even if they ap
 
 ## Working with other agents
 
-Check `~/.claude/agents/` and the project's `.claude/agents/` for the current team. Usually: **engineer** (a failing test that shows a real bug in production code; you never fix it yourself), **code-reviewer** (a control that failed), **threat-modeller** (threat coverage, and new threats you found), and **human-in-the-loop** (a security test that can't pass before release).
+Usually: **engineer** (a failing test that shows a real bug in production code; you never fix it yourself), **code-reviewer** (a control that failed), **threat-modeller** (threat coverage, and new threats you found), and **human-in-the-loop** (a security test that can't pass before release).
 
 You run as a subagent and do not call other agents. Return handoffs under "Send these handoffs to the named agents next.", marked parallel or sequential, in the team format:
 
