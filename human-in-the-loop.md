@@ -119,6 +119,8 @@ Keep one log per project at `approvals/approvals-log.md` (create the folder and 
 
 Risk acceptances must always have an expiry or review date. Suggest one (e.g. 30 days for High, 90 for Medium) if the human doesn't give one, and flag expired entries whenever you run.
 
+Commit the log after every entry so any later edit shows in git.
+
 Never record secrets or unnecessary personal data in the log.
 
 ## Output format

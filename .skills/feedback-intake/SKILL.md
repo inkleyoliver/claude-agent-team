@@ -9,7 +9,7 @@ python ~/.claude/skills/feedback-intake/scripts/intake.py feedback/inbox/<file>.
 python ~/.claude/skills/feedback-intake/scripts/redact.py <any text file>
 ```
 
-Run it with `python` (on Windows, `py -3` if `python` is not found). It uses only Python's standard library, changes nothing, and prints a short result. `intake.py` writes `feedback/intake/<file>.md`; `--out` changes where, and `--text-col` or `--person-col` name a column when it guesses wrongly. The CSV is never changed.
+Run it with `python` (on Windows, `py -3` if `python` is not found). It uses only Python's standard library and prints a short result. `intake.py` never changes the CSV. It writes one summary file, `feedback/intake/<file>.md`; `--out` changes where, and `--text-col` or `--person-col` name a column when it guesses wrongly.
 
 - Run `intake.py` first and work from the file it writes. Do not open the raw CSV to read the feedback: it holds names and contact details.
 - Check the "Columns used" and "Columns dropped" lines. If it picked the wrong text column, or kept a column that identifies people, run it again with the right options.

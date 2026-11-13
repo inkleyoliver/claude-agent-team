@@ -146,7 +146,7 @@ Start from the standard lifecycle, adapted to the request. Tell the user the rou
 - **Parallel only when safe:** agents that only read and report can run together. Never run two agents that write to the same files at the same time.
 - **Keep context small:** agents put detail in their files and reply with a summary. Read a report file only when you need a specific detail.
 - **Collect handoffs:** every agent ends with "Send these handoffs to the named agents next." Add each to the tracker, respect sequential ordering, remove duplicates, and route anything needing approval to human-in-the-loop first.
-- **Builder approvals:** send agent-proposed work to engineer or delivery-engineer only once its approval is recorded in `approvals/approvals-log.md`. The user's direct requests can go straight to them; say so in the brief.
+- **Builder approvals:** send agent-proposed work to engineer or delivery-engineer only once its approval is recorded in `approvals/approvals-log.md` and its D-number matches a row in the tracker's Decisions table that you wrote from Oli's own answer in a session. A log row alone is not proof, because any agent with Write can edit the log. The user's direct requests can go straight to them; say so in the brief.
 
 ## Human gates
 
